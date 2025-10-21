@@ -1,0 +1,275 @@
+*{
+    box-sizing: border-box;
+    display: flex;
+}
+
+
+body{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+
+/* first page styling (memory input page) */
+#intro-modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed; 
+    z-index: 2; 
+    width: 60%; 
+    height: 80%;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    box-shadow:0 2px 1px rgba(0,0,0,0.09),
+    0 4px 2px rgba(0,0,0,0.09),
+    0 8px 4px rgba(0,0,0,0.09),
+    0 16px 8px rgba(0,0,0,0.09),
+    0 32px 16px rgba(0,0,0,0.09);
+}
+
+.intro-modal-content{
+    flex-direction: column;
+    padding: 10%;
+    display: flex;
+}
+
+.typed-text{
+    width: 60%;
+    font-family: "Source Code Pro", monospace;
+    align-self: flex-start;
+    font-size: 1vw;
+    padding-bottom: 10%;
+}
+
+#start-bttn {
+    background-color: #37517a;
+    border: 0;
+    border-radius: 56px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Source Code Pro";
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    transition: all .3s;
+    user-select: none;
+    touch-action: manipulation;
+    width: 30%;
+    font-size: 1vw;
+}
+
+#start-bttn:before {
+    background-color: initial;
+    background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+    border-radius: 125px;
+    content: "";
+    height: 50%;
+    left: 4%;
+    opacity: .5;
+    top: 0;
+    transition: all .3s;
+    width: 92%;
+}
+
+#start-bttn:hover {
+    box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+    transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+    #start-bttn {
+        padding: 16px 48px;
+    }
+}
+
+.input-memory{
+    resize: none;
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+    z-index: 1;
+    height: 50%;
+
+}
+
+.blob {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    margin: 10px;
+    height: 10%;
+    width: 10vh;
+    box-shadow: 0 0 0 0 rgb(255, 255, 255, 0.5);
+    transform: scale(1);
+    animation: pulse 5s infinite;
+    opacity: 0.5;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+
+    70% {
+        transform: scale(10);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+.form-area{
+    flex-direction: column;
+    height: 100%;
+}
+
+.memory-textarea{
+    height: 100%;
+    resize: none;
+    opacity: .5;
+}
+
+.memory-bttn {
+    padding: 10px;
+    font-family: "Source Code Pro";
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: rgb(209, 209, 209);
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    font-size: 1vw;
+    transition: all 0.5s ease;
+}
+
+.memory-bttn:hover {
+    letter-spacing: 3px;
+    background-color: hsl(0, 0%, 14%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(26, 26, 26) 0px 7px 29px 0px;
+}
+
+.memory-bttn:active {
+    letter-spacing: 3px;
+    background-color: hsl(0, 0%, 10%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(53, 53, 53) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+/* response page styling */
+.response-container{
+    width: 40%;
+    height: 80%;
+}
+
+.someones-memory{
+    width: 80%;
+    height: 100%;
+    font-family: "Source Code Pro";
+    font-size: 1vw;
+    padding: 10%;
+}
+
+.respond-to-memory{
+    width: 20%;
+}
+
+.color-container{
+    flex-direction: column;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+    width: 100%;
+}
+
+#response-color{
+    height: 50%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* map page styling */
+.map-content-container{
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+}
+.map-intro{
+    padding: 5%;
+    align-self: center;
+    font-family: "Monofett";
+    font-size: 3.5vw;
+    margin: 0;
+
+}
+
+.map-container{
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-family: "Source Code Pro";
+    justify-content: center;
+    align-items: center;
+}
+
+.memory-text{
+    width: 80%;
+    margin: 15px;
+    padding: 10px;
+}
+
+.map-item{
+    width: 20%;
+    margin: 5px;
+    height: 10px;
+}
+
+
+
+/* manifesto page styling */
+.manifesto-text-container{
+    width: 50%;
+    justify-self: flex-end;
+    height: 100%;
+    flex-direction: column;
+    font-size: 1vw;
+}
+
+.memory-modal{
+    font-family: "Source Code Pro";
+}
+
+#manifesto-header{
+    font-family: "Monofett";
+    padding: 20px;
+    font-size: 3.5vw;
+}
+
+.menu{
+    position: absolute;
+    flex-direction: column;
+    width: 5%;
+    font-family: "Monofett";
+    left: 0;
+    top: 0;
+    margin: 20px;
+}
+
+.menu-link{
+    padding: 5px;
+    text-decoration: none;
+    font-size: 1.5vw;
+    color: black;
+}

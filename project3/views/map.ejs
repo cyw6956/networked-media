@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+        <script src="map.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Monofett&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="menu">
+            <a class="menu-link" href="/" >input memory</a>
+            <a class="menu-link" href="/map">browse memories</a>
+            <a class="menu-link" href="/manifesto">read manifesto</a>
+        </div>
+        <div class="map-content-container">
+            <p class="map-intro">take a peek at someone else's life</p>
+            <div class="map-container">
+                    <% for(let m of allMemories){ %>
+                        <%if(m.respond !=""){%>
+                            <div class="memory-text" style="border: 7px solid <%=m.respond%>">
+                                <p> <%= m.text %></p>
+                            </div>
+                        <% } %>
+                    <%}%>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="respond.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Monofett&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="intro-modal">
+            <div class="intro-modal-content">
+                <p class="typed-text" style="text-wrap: wrap;">
+                    i feel like though, in hindsight, blue filled my mind only because of the sweater, 
+                    but if i were to think about how i truly felt, emotionally, i would remember this 
+                    as the color black. the color of the end, of severence.</br>
+                    would you please help someone maybe think of their memories in a different light?
+                </p>
+                <button id="start-bttn" style="background-color: black;">ready</button>
+            </div>
+        </div>
+        <div class="response-container">
+            <div class="someones-memory">
+                <p>
+                    <%= allMemories %>
+                </p>
+            </div>
+            <div class="respond-to-memory">
+                <form class="color-container" action="/respond" method="GET">
+                        <input
+                            type="color"
+                            id="response-color"
+                            name="respond"
+                            value="#ff0000"
+                            colorspace="display-p3"
+                            alpha />
+                        <label for="background" style="margin-bottom: 20px; font-family: Source Code Pro;">choose color</label>
+                    <input class="memory-bttn" type="submit" value="select">
+                </form>
+            </div>
+        </div>
+        
+    </body>
+</html>

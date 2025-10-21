@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <!-- <title>do u remember?</title> -->
+        <link rel="stylesheet" href="style.css"/>
+        <script src="memory.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Monofett&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="blob"></div>
+        <div id="intro-modal">
+            <div class="intro-modal-content">
+                <p class="typed-text" style="text-wrap: wrap;">
+                    it was a blue sweater, the last gift that she gave me.
+                    after i moved away we exchanged birthday gifts for three 
+                    years. but one year, on october 3rd, she stopped replying. 
+                    now all thhat i remember of her is this blue. </br>
+                    now, when you see a color, will you remember something?
+                </p>
+                <button id="start-bttn">i remember</button>
+            </div>
+        </div>
+        <div class="input-memory">
+            <form class="form-area" action="/upload" method="GET">
+                <textarea class="memory-textarea" type="text" name="memory" placeholder="i remember when..."></textarea>>
+                <input class="memory-bttn" type="submit" value="send off">
+                <input type="hidden" id="assigned-color" name="color" value="">
+            </form>
+        </div>
+    </body>
+</html>
