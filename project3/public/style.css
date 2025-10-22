@@ -218,7 +218,7 @@ body{
 .map-container{
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: auto;
     font-family: "Source Code Pro";
     justify-content: center;
     align-items: center;
