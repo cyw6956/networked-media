@@ -17,7 +17,7 @@
             <p class="map-intro">take a peek at someone else's life</p>
             <div class="map-container">
                     <% for(let m of allMemories){ %>
-                        <%if(m.respond !=""){%>
+                        <%if(m.respond !="" && m.text!=""){%>
                             <div class="memory-text" style="border: 7px solid <%=m.respond%>">
                                 <p> <%= m.text %></p>
                             </div>
